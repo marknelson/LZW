@@ -203,9 +203,9 @@ UINT _cdecl CLzwTestDlg::CompressorThread( LPVOID pParam )
         }
         in.close();
         out.close();
+        lzw_in.close();
         DeleteFile( temp_name_lzw );
         DeleteFile( temp_name_out );
-        lzw_in.close();
         CString text;
         text.Format( "%ld", lzw_size );
         pDlg->m_List.SetItemText( i, 2, text);
